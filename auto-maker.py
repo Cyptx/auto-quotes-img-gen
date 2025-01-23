@@ -33,11 +33,11 @@ def draw_text_on_image(image_path, quote, output_path):
 
 #we can add more images and their names
 imgs = ["SYD ZOQ.png"]
-quotes_file_path = '/content/quotes.csv'
+quotes_file_path = '/content/input/quotes.csv'
 with open(quotes_file_path, 'r') as file:
     reader = csv.reader(file)
     for row in reader:
         imgtemp = random.choice(imgs)
         quote = row[0]
-        output_image_path = f'/content/{quote[:10]}.png'
-        draw_text_on_image(f'/content/{imgtemp}', quote, output_image_path)
+        output_image_path = f'/content/output/{quote[:10]}.png'
+        draw_text_on_image(f'/content/input/{imgtemp}', quote, output_image_path)
